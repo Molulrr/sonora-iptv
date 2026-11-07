@@ -1,79 +1,76 @@
 <p align="center">
-  <img src="assets/logo.svg" width="96" alt="Sonora IPTV">
+  <img src="assets/logo.svg" width="88" alt="Sonora IPTV">
 </p>
 
 <h1 align="center">Sonora IPTV</h1>
 
 <p align="center">
-  <b>Der elegante IPTV-Player für Windows.</b><br>
-  Live-TV mit Programmführer, Filme und Serien aus deinem eigenen Xtream- oder M3U-Abo.
+  IPTV-Player für Windows 10 und 11.<br>
+  Live-TV mit TV-Programm, Filme und Serien aus deinem eigenen Xtream- oder M3U-Abo.
 </p>
 
 <p align="center">
-  <a href="https://github.com/Molulrr/sonora-iptv/releases/latest"><img alt="Neueste Version" src="https://img.shields.io/github/v/release/Molulrr/sonora-iptv?label=Version&color=7c4dff&style=for-the-badge"></a>
-  <a href="https://github.com/Molulrr/sonora-iptv/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/Molulrr/sonora-iptv/total?label=Downloads&color=9f7aff&style=for-the-badge"></a>
-  <img alt="Windows 10 und 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-2f2a44?style=for-the-badge">
+  <a href="https://github.com/Molulrr/sonora-iptv/releases/latest"><img alt="Version" src="https://img.shields.io/github/v/release/Molulrr/sonora-iptv?label=Version&color=ff6b57&labelColor=1d1a17&style=flat-square"></a>
+  <a href="https://github.com/Molulrr/sonora-iptv/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/Molulrr/sonora-iptv/total?label=Downloads&color=3a342e&labelColor=1d1a17&style=flat-square"></a>
+  <img alt="Windows 10 und 11" src="https://img.shields.io/badge/Windows-10%20%7C%2011-3a342e?labelColor=1d1a17&style=flat-square">
 </p>
 
 <p align="center">
-  <a href="https://github.com/Molulrr/sonora-iptv/releases/latest"><b>⬇️ Download für Windows</b></a>
+  <a href="https://github.com/Molulrr/sonora-iptv/releases/latest"><b>Download für Windows</b></a>
   &nbsp;·&nbsp;
-  <a href="https://molulrr.github.io/sonora-iptv/"><b>🌐 Webseite</b></a>
+  <a href="https://molulrr.github.io/sonora-iptv/"><b>Website</b></a>
   &nbsp;·&nbsp;
-  <a href="#anleitung"><b>📖 Anleitung</b></a>
+  <a href="#anleitung"><b>Anleitung</b></a>
 </p>
 
 <p align="center">
-  <img src="assets/screenshots/home.webp" alt="Sonora IPTV – Startseite" width="900">
+  <img src="assets/screenshots/home.webp" alt="Sonora IPTV: Startseite" width="900">
 </p>
 
----
-
-## ✨ Funktionen
+## Funktionen
 
 | | |
 |---|---|
-| 📺 **Live-TV mit Vorschau** | Kategorien, Senderliste und große Live-Vorschau nebeneinander. |
-| 🗓️ **Programmführer (EPG)** | Was läuft jetzt, was kommt danach – automatisch geladen. |
-| 🎬 **Filme & Serien** | Poster, Beschreibung, Besetzung, Staffeln, Episoden und Trailer. |
-| ⏯️ **Weiterschauen** | Filme und Folgen starten dort, wo du aufgehört hast. |
-| ▶️ **mpv-Wiedergabe** | Hardware-Decodierung, Deinterlacing, Tonspuren, Untertitel. |
-| 🪟 **Mini-Player** | Weiter stöbern, während das Video läuft. |
-| 🔎 **Suche & Favoriten** | Eine Suche für alles, eigene Lieblings-Kategorien. |
-| 🔒 **Sicher** | Zugangsdaten liegen in der Windows-Anmeldeinformationsverwaltung. |
-| 🌍 **6 Sprachen** | Deutsch, Englisch, Französisch, Spanisch, Italienisch, Türkisch. |
-| 🔄 **Automatische Updates** | Neue Versionen mit einem Klick installieren. |
+| **Live-TV** | Alle Sender als Kacheln mit dem, was gerade läuft, daneben die Live-Vorschau. Versionen eines Senders werden zusammengefasst. |
+| **TV-Programm** | Programmraster für alle Sender, geladen von deinem Anbieter oder aus einer XMLTV-Datei. |
+| **Filme und Serien** | Poster, Handlung, Besetzung, Trailer, Staffeln und Folgen, Top 10 der Woche und neueste Titel. |
+| **Weiterschauen** | Filme und Folgen starten dort, wo du aufgehört hast. Die nächste Folge kommt von selbst. |
+| **Wiedergabe mit mpv** | Hardware-Decodierung, Tonspuren, Untertitel, Wiedergabegeschwindigkeit und Stream-Infos. |
+| **Suche und Favoriten** | Eine Suche für alles, Lieblingskategorien anpinnen, ungenutzte ausblenden. |
+| **Tastatur und Fernbedienung** | Pfeiltasten-Steuerung, eigene Tastenkürzel, Oberfläche bis Fernsehgröße. |
+| **Sicher und aktuell** | Zugangsdaten in der Windows-Anmeldeinformationsverwaltung, Abo-Laufzeit im Blick, Updates mit einem Klick. |
+| **6 Sprachen** | Deutsch, Englisch, Französisch, Spanisch, Italienisch, Türkisch. |
 
-## 🖼️ Screenshots
+## Ansichten
 
-| Live-TV | Filme |
+| Live-TV | TV-Programm |
 |---|---|
-| ![Live-TV](assets/screenshots/live-tv.webp) | ![Filme](assets/screenshots/movies.webp) |
-| **Filmdetails** | **Serien** |
-| ![Filmdetails](assets/screenshots/movie-details.webp) | ![Serien](assets/screenshots/series-details.webp) |
+| ![Live-TV](assets/screenshots/live-tv.webp) | ![TV-Programm](assets/screenshots/guide.webp) |
+| **Filme** | **Filmdetails** |
+| ![Filme](assets/screenshots/movies.webp) | ![Filmdetails](assets/screenshots/movie-details.webp) |
+| **Serien** | **Einstellungen** |
+| ![Serien](assets/screenshots/series-details.webp) | ![Einstellungen](assets/screenshots/settings.webp) |
 
-## ⬇️ Installation
+## Installation
 
 1. Lade die neueste **`Sonora.IPTV_<Version>_x64-setup.exe`** unter [Releases](https://github.com/Molulrr/sonora-iptv/releases/latest) herunter.
-2. Starte die Datei per Doppelklick und folge den Anweisungen (keine Administratorrechte nötig).
-3. Öffne Sonora IPTV und füge deinen Anbieter hinzu.
+2. Starte die Datei per Doppelklick. Administratorrechte sind nicht nötig.
+3. Öffne Sonora IPTV und trage deinen Anbieter ein.
 
 > [!NOTE]
-> Zeigt Windows **„Der Computer wurde durch Windows geschützt“**, klicke auf **„Weitere Informationen“** → **„Trotzdem ausführen“**. Das passiert, weil die App noch neu ist.
+> Zeigt Windows **„Der Computer wurde durch Windows geschützt“**, klicke auf **„Weitere Informationen“** und dann auf **„Trotzdem ausführen“**. Das erscheint, weil die App neu und noch nicht signiert ist.
 
-## <a id="anleitung"></a>📖 Anleitung
+## <a id="anleitung"></a>Anleitung
 
-### Anbieter mit Xtream Codes
-1. **Einstellungen → Anbieter → „Anbieter hinzufügen“**
-2. **Xtream Codes** wählen, Namen vergeben
-3. **Server-URL**, **Benutzername** und **Passwort** eintragen
-4. **„Verbindung testen“** → **„Speichern“**
+### Mit Benutzername und Passwort (Xtream Codes)
+1. Beim ersten Start oder unter **Einstellungen → Anbieter** den Typ **Xtream Codes** wählen
+2. **Server-URL**, **Benutzername** und **Passwort** eintragen
+3. **Verbindung testen**, dann **Speichern**
 
-### Anbieter mit M3U-/M3U8-Playlist
-1. **Einstellungen → Anbieter → „Anbieter hinzufügen“**
-2. **M3U-/M3U8-Playlist** wählen
-3. **Playlist-URL** einfügen oder eine **Datei** auswählen
-4. Optional einen **Programmführer (XMLTV)** angeben → **„Speichern“**
+### Mit einer Playlist (M3U / M3U8)
+1. **M3U-/M3U8-Playlist** wählen
+2. **Playlist-Link** einfügen oder eine **Datei** auswählen
+3. Optional einen **Programmführer (XMLTV)** angeben, dann **Speichern**
 
 ### Tastenkürzel im Player
 
@@ -85,22 +82,28 @@
 | `↑` / `↓` | Lautstärke |
 | `←` / `→` | 10 Sekunden zurück / vor |
 | `Bild ↑` / `Bild ↓` | Vorheriger / nächster Sender |
-| `Esc` | Vollbild verlassen / Player verkleinern |
+| `[` / `]` | Langsamer / schneller |
+| `I` | Stream-Infos |
+| `Esc` | Vollbild verlassen |
 
-### Probleme?
-- **Stream ruckelt:** Einstellungen → Live-TV → *Live-Stream-Format* auf **HLS** stellen oder den **Netzwerkpuffer** erhöhen.
-- **Video bleibt schwarz:** Einstellungen → Wiedergabe → *Videoausgabe* auf **Separates Fenster** stellen.
-- **Bildfehler:** **Hardware-Decodierung** ausschalten.
+Alle Kürzel lassen sich unter **Einstellungen → Tastenkürzel** ändern.
 
-Weitere Fragen beantwortet die [FAQ auf der Webseite](https://molulrr.github.io/sonora-iptv/#faq). Fehler gefunden? [Problem melden](https://github.com/Molulrr/sonora-iptv/issues).
+### Probleme
+- **Stream ruckelt:** Einstellungen → Live-TV, Format auf **HLS** stellen oder den **Netzwerkpuffer** erhöhen
+- **Bild bleibt schwarz:** Einstellungen → Wiedergabe, Videoausgabe auf **Separates Fenster** stellen
+- **Bildfehler:** **Hardware-Decodierung** ausschalten
 
-## 💻 Systemanforderungen
+Weitere Antworten in den [häufigen Fragen auf der Website](https://molulrr.github.io/sonora-iptv/#faq). Fehler gefunden? [Problem melden](https://github.com/Molulrr/sonora-iptv/issues).
 
-- Windows 10 oder 11 (64-Bit)
-- ca. 150 MB freier Speicher
-- Internetverbindung (ab 10 Mbit/s für HD)
-- Ein eigenes IPTV-Abo (Xtream Codes oder M3U)
+## Voraussetzungen
+
+| | |
+|---|---|
+| System | Windows 10 / 11, 64-Bit |
+| Speicher | ca. 150 MB |
+| Internet | ab 10 Mbit/s für HD |
+| Du brauchst | ein eigenes IPTV-Abo (Xtream Codes oder M3U) |
 
 ---
 
-<sub>Sonora IPTV ist ein Medienplayer und stellt keine Inhalte, Sender oder Abonnements bereit. Nutze ihn ausschließlich mit Inhalten, zu deren Wiedergabe du berechtigt bist. Wiedergabe mit [mpv](https://mpv.io) (GPL/LGPL). © 2026 Sonora IPTV.</sub>
+<sub>Sonora IPTV ist ein Medienplayer und stellt keine Inhalte, Sender oder Abos bereit. Nutze ihn nur mit Inhalten, die du abspielen darfst. Wiedergabe mit [mpv](https://mpv.io) (GPL/LGPL). © 2026 Sonora IPTV.</sub>
