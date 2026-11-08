@@ -5,31 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sonora IPTV · IPTV-Player für Windows</title>
 <meta name="description" content="Sonora IPTV ist ein kostenloser IPTV-Player für Windows: Live-TV mit TV-Programm, Filme und Serien aus deinem eigenen Xtream- oder M3U-Abo, Wiedergabe mit mpv.">
-<meta name="theme-color" content="#13110f">
+<meta name="theme-color" content="#0b0b0c">
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 <link rel="apple-touch-icon" href="assets/logo-256.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sonora IPTV · IPTV-Player für Windows">
 <meta property="og:description" content="Live-TV, Filme und Serien aus deinem eigenen IPTV-Abo, mit TV-Programm und Weiterschauen.">
-<meta property="og:image" content="https://molulrr.github.io/sonora-iptv/assets/screenshots/home.webp">
+<meta property="og:image" content="https://molulrr.github.io/sonora-iptv/docs/assets/sonora-hero.png">
 <meta property="og:url" content="https://molulrr.github.io/sonora-iptv/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  /* Same tokens as the app ("Abendprogramm"): warm near-black, one coral
-     accent for what is live or selected, corners 4 / 8 / 12 px. */
+  /* Shared identity with the README renders: near-black charcoal, off-white
+     type, one dark red used sparingly. Corners 4 / 8 / 12 px like the app. */
   :root {
-    --bg: #13110f;
-    --card: #1d1a17;
-    --elevated: #282420;
-    --line: rgba(241, 236, 229, 0.08);
-    --fg: #f1ece5;
-    --dim: #aca49a;
-    --mute: #8c857c;
-    --accent: #ff6b57;
-    --on-accent: #1c0c09;
+    --bg: #0b0b0c;
+    --card: #141415;
+    --elevated: #1e1e20;
+    --line: rgba(236, 232, 226, 0.08);
+    --fg: #ece8e2;
+    --dim: #a19c95;
+    --mute: #77726c;
+    --accent: #b23a3b;
+    --red: #9e2a2b;
+    --on-accent: #fff;
     --r-sm: 4px; --r-md: 8px; --r-lg: 12px;
     --max: 1200px;
     --ui: "Instrument Sans", "Segoe UI", system-ui, sans-serif;
@@ -55,12 +56,12 @@
 
   /* Top bar: logo left, glass navigation pill in the middle like the app */
   header.top { position: fixed; inset: 0 0 auto; z-index: 20; transition: background-color .2s var(--ease); }
-  header.top.scrolled { background: rgba(19, 17, 15, 0.82); backdrop-filter: blur(20px); box-shadow: 0 1px 0 var(--line); }
+  header.top.scrolled { background: rgba(11, 11, 12, 0.82); backdrop-filter: blur(20px); box-shadow: 0 1px 0 var(--line); }
   .top .wrap { height: 76px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; }
   .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; letter-spacing: 0.06em; font-size: 15px; }
   .brand img { width: 30px; height: 30px; }
   .brand span { color: var(--dim); font-weight: 500; }
-  .pill { display: flex; gap: 2px; padding: 4px; border-radius: 10px; background: rgba(255, 248, 240, 0.055); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08); backdrop-filter: blur(24px) saturate(1.4); }
+  .pill { display: flex; gap: 2px; padding: 4px; border-radius: 10px; background: rgba(255, 255, 255, 0.045); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08); backdrop-filter: blur(24px) saturate(1.4); }
   .pill a, .pill button { all: unset; cursor: pointer; padding: 7px 14px; border-radius: 6px; font-size: 14px; font-weight: 500; color: var(--dim); transition: color .15s, background-color .15s; white-space: nowrap; }
   .pill a:hover, .pill button:hover { color: var(--fg); }
   .pill .on, .pill [aria-selected="true"], .pill [aria-pressed="true"] { background: var(--fg); color: var(--bg); }
@@ -78,27 +79,29 @@
   .btn-ghost:hover { background: rgba(255, 255, 255, 0.06); }
   .btn-sm { height: 36px; padding: 0 14px; font-size: 14px; }
 
-  /* Equalizer bars from the logo, moving only where something is "on air" */
-  .eq { display: inline-flex; align-items: flex-end; gap: 2px; height: 12px; color: var(--accent); }
-  .eq i { width: 3px; background: currentColor; border-radius: 1px; transform-origin: bottom; }
-  @media (prefers-reduced-motion: no-preference) { .eq i { animation: eq .9s ease-in-out infinite; } .eq i:nth-child(2) { animation-delay: -.3s; } .eq i:nth-child(3) { animation-delay: -.6s; } }
-  @keyframes eq { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(.45); } }
 
   /* Hero */
-  .hero { position: relative; padding-top: 168px; overflow: hidden; }
-  .hero::before { content: ""; position: absolute; inset: 0 0 30% 0; background: radial-gradient(60% 70% at 70% 20%, rgba(214, 120, 70, 0.16), transparent 70%); pointer-events: none; }
+  .hero { position: relative; padding-top: 148px; overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 24px 64px; align-items: end; }
+  .hero-side { padding-bottom: 6px; }
+  @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
   .hero .wrap { position: relative; }
-  .onair { display: inline-flex; align-items: center; gap: 10px; font: 500 12px var(--mono); color: var(--dim); }
-  .hero h1 { margin-top: 20px; font: 700 clamp(56px, 9vw, 120px)/0.9 var(--display); text-transform: uppercase; letter-spacing: 0.005em; max-width: 11ch; }
-  .hero .lead { margin-top: 24px; max-width: 560px; font-size: 18px; line-height: 1.55; color: var(--dim); }
-  .hero .actions { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .onair { display: inline-flex; align-items: center; gap: 12px; font: 500 12px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+  .onair i.sq { width: 8px; height: 8px; background: var(--red); display: inline-block; }
+  .hero h1 { margin-top: 22px; font: 700 clamp(52px, 7.4vw, 108px)/0.9 var(--display); text-transform: uppercase; letter-spacing: 0.005em; max-width: 11ch; }
+  .hero .lead { max-width: 480px; font-size: 18px; line-height: 1.55; color: var(--dim); }
+  .hero .actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
   .hero .meta { margin-top: 20px; font: 12px var(--mono); color: var(--mute); }
-  .shot { margin-top: 72px; border-radius: var(--r-lg) var(--r-lg) 0 0; overflow: hidden; box-shadow: 0 0 0 1px var(--line), 0 40px 100px -30px rgba(0, 0, 0, 0.8); background: var(--card); }
-  .shot img { width: 100%; height: auto; }
+  /* The render already carries its own studio light; fade its edges into the page */
+  .render { position: relative; left: 50%; transform: translateX(-50%); width: min(1680px, 100vw); margin-top: 40px;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%), linear-gradient(180deg, transparent 0, #000 9%, #000 84%, transparent 100%);
+    -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%), linear-gradient(180deg, transparent 0, #000 9%, #000 84%, transparent 100%); mask-composite: intersect; }
+  .render img { width: 100%; height: auto; }
 
   section { padding: 112px 0; }
   .sec-head { display: flex; flex-direction: column; gap: 12px; margin-bottom: 48px; max-width: 640px; }
-  .kicker { font: 500 12px var(--mono); color: var(--mute); }
+  .kicker { display: inline-flex; align-items: center; gap: 10px; font: 500 12px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+  .kicker::before { content: ""; width: 7px; height: 7px; background: var(--red); }
 
   /* Features as a programme listing: label column, description column */
   .listing { border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; }
@@ -109,7 +112,7 @@
 
   /* Screenshot viewer */
   .viewer-tabs { display: inline-flex; max-width: 100%; overflow-x: auto; scrollbar-width: none; margin-bottom: 20px; }
-  .viewer { border-radius: var(--r-lg); overflow: hidden; box-shadow: 0 0 0 1px var(--line); background: var(--card); }
+  .viewer { border-radius: var(--r-lg); overflow: hidden; box-shadow: 0 0 0 1px var(--line); background: var(--bg); aspect-ratio: 16 / 9; }
   .viewer img { width: 100%; height: auto; }
   .caption { margin-top: 14px; font-size: 14px; color: var(--mute); min-height: 1.6em; }
 
@@ -194,8 +197,10 @@
 <main>
   <div class="hero">
     <div class="wrap">
-      <p class="onair"><span class="eq" aria-hidden="true"><i style="height:100%"></i><i style="height:66%"></i><i style="height:40%"></i></span> <span data-en="IPTV player for Windows 10 and 11">IPTV-Player für Windows 10 und 11</span></p>
+      <p class="onair"><i class="sq" aria-hidden="true"></i><span data-en="IPTV player for Windows 10 and 11">IPTV-Player für Windows 10 und 11</span></p>
+      <div class="hero-grid">
       <h1 data-en="Your TV evening, on Windows">Dein Fernsehabend auf Windows</h1>
+      <div class="hero-side">
       <p class="lead" data-en="Live TV with a programme guide, movies and series from your own Xtream or M3U subscription. Free, without ads, in six languages.">Live-TV mit TV-Programm, Filme und Serien aus deinem eigenen Xtream- oder M3U-Abo. Kostenlos, ohne Werbung, in sechs Sprachen.</p>
       <div class="actions">
         <a class="btn btn-primary js-download" href="https://github.com/Molulrr/sonora-iptv/releases/latest">
@@ -205,9 +210,11 @@
         <a class="btn btn-ghost" href="#guide" data-en="How it works">So funktioniert's</a>
       </div>
       <p class="meta"><span data-en="Version">Version</span> <span class="js-version">1.6.0</span> · Windows 10 / 11 · 64-Bit · <span data-en="free">kostenlos</span></p>
-      <div class="shot">
-        <img src="assets/screenshots/home.webp" width="1600" height="1000" alt="Sonora IPTV: Startseite mit großer Film-Vorschau und laufenden Sendern" data-en-alt="Sonora IPTV: home screen with a large movie preview and channels on air">
       </div>
+      </div>
+    </div>
+    <div class="render">
+      <img src="docs/assets/sonora-hero.webp" width="1920" height="1080" fetchpriority="high" alt="Sonora IPTV auf drei Monitoren: vorne die Startseite, dahinter Live-TV und die Filmbibliothek" data-en-alt="Sonora IPTV on three monitors: the home screen in front, Live TV and the movie library behind it">
     </div>
   </div>
 
@@ -218,12 +225,12 @@
         <h2 data-en="Everything for live TV, movies and series">Alles für Live-TV, Filme und Serien</h2>
       </div>
       <div class="listing">
-        <div><span class="no">01</span><h3>Live-TV</h3><p data-en="All channels as tiles with what is on now, a live preview next to them and versions of a channel grouped together.">Alle Sender als Kacheln mit dem, was gerade läuft, daneben die Live-Vorschau. Versionen eines Senders (HD, FHD …) werden zusammengefasst.</p></div>
-        <div><span class="no">02</span><h3 data-en="TV guide">TV-Programm</h3><p data-en="A programme grid for all channels, loaded automatically from your provider or an XMLTV file.">Ein Programmraster für alle Sender, automatisch geladen von deinem Anbieter oder aus einer XMLTV-Datei.</p></div>
+        <div><span class="no">01</span><h3>Live-TV</h3><p data-en="Categories, a fast channel list and a live preview. Versions of a channel (HD, FHD …) are grouped into one.">Kategorien, eine schnelle Senderliste und die Live-Vorschau. Versionen eines Senders (HD, FHD …) werden zusammengefasst.</p></div>
+        <div><span class="no">02</span><h3 data-en="TV guide">TV-Programm</h3><p data-en="Today's programme as a timeline under every channel, from your provider or an XMLTV file.">Das Tagesprogramm als Zeitleiste unter jedem Sender, von deinem Anbieter oder aus einer XMLTV-Datei.</p></div>
         <div><span class="no">03</span><h3 data-en="Movies and series">Filme und Serien</h3><p data-en="Posters, plot, cast and trailer, seasons and episodes, the top 10 of the week and the newest additions.">Poster, Handlung, Besetzung und Trailer, Staffeln und Folgen, die Top 10 der Woche und die neuesten Titel.</p></div>
-        <div><span class="no">04</span><h3 data-en="Continue watching">Weiterschauen</h3><p data-en="Movies and episodes start where you stopped, the next episode follows by itself.">Filme und Folgen starten dort, wo du aufgehört hast. Die nächste Folge kommt von selbst.</p></div>
+        <div><span class="no">04</span><h3 data-en="Live sport">Live-Sport</h3><p data-en="Scores from the big leagues, matched to the channels in your subscription that show each game.">Spielstände der großen Ligen, verknüpft mit den Sendern aus deinem Abo, die das Spiel zeigen.</p></div>
         <div><span class="no">05</span><h3 data-en="Playback with mpv">Wiedergabe mit mpv</h3><p data-en="Hardware decoding, audio tracks, subtitles, playback speed and stream info. Live streams reconnect by themselves.">Hardware-Decodierung, Tonspuren, Untertitel, Wiedergabegeschwindigkeit und Stream-Infos. Abgebrochene Live-Streams verbinden sich neu.</p></div>
-        <div><span class="no">06</span><h3 data-en="Search and favourites">Suche und Favoriten</h3><p data-en="One search for channels, movies and series. Pin your favourite categories, hide the ones you never watch.">Eine Suche für Sender, Filme und Serien. Lieblingskategorien anpinnen, ungenutzte ausblenden.</p></div>
+        <div><span class="no">06</span><h3 data-en="Continue watching and search">Weiterschauen und Suche</h3><p data-en="Movies and episodes resume where you stopped. One search (Ctrl + F) for channels, movies and series.">Filme und Folgen laufen dort weiter, wo du aufgehört hast. Eine Suche (Strg + F) für Sender, Filme und Serien.</p></div>
         <div><span class="no">07</span><h3 data-en="Keyboard and remote">Tastatur und Fernbedienung</h3><p data-en="Arrow-key navigation, your own shortcuts and an interface size up to TV, for the PC on the TV set.">Steuerung mit den Pfeiltasten, eigene Tastenkürzel und eine Oberfläche bis Fernsehgröße, für den PC am Fernseher.</p></div>
         <div><span class="no">08</span><h3 data-en="Safe and up to date">Sicher und aktuell</h3><p data-en="Logins stay in the Windows Credential Manager. Subscription expiry in view, updates with one click.">Zugangsdaten liegen in der Windows-Anmeldeinformationsverwaltung. Abo-Laufzeit im Blick, Updates mit einem Klick.</p></div>
       </div>
@@ -238,13 +245,14 @@
       </div>
       <div class="pill viewer-tabs" role="tablist" aria-label="Ansichten">
         <button role="tab" aria-selected="true" data-shot="live-tv">Live-TV</button>
-        <button role="tab" aria-selected="false" data-shot="guide" data-en="TV guide">TV-Programm</button>
         <button role="tab" aria-selected="false" data-shot="movies" data-en="Movies">Filme</button>
-        <button role="tab" aria-selected="false" data-shot="movie-details" data-en="Movie details">Filmdetails</button>
-        <button role="tab" aria-selected="false" data-shot="series-details" data-en="Series">Serien</button>
+        <button role="tab" aria-selected="false" data-shot="player">Player</button>
+        <button role="tab" aria-selected="false" data-shot="tv-guide" data-en="TV guide">TV-Programm</button>
+        <button role="tab" aria-selected="false" data-shot="live-sport" data-en="Live sport">Live-Sport</button>
+        <button role="tab" aria-selected="false" data-shot="series" data-en="Series">Serien</button>
         <button role="tab" aria-selected="false" data-shot="settings" data-en="Settings">Einstellungen</button>
       </div>
-      <div class="viewer"><img id="viewer-img" src="assets/screenshots/live-tv.webp" width="1600" height="1000" alt="" loading="lazy"></div>
+      <div class="viewer"><img id="viewer-img" src="docs/assets/de/sonora-live-tv.webp" width="1920" height="1080" alt="" loading="lazy"></div>
       <p class="caption" id="viewer-cap"></p>
     </div>
   </section>
@@ -381,8 +389,8 @@
 
   // Screenshot viewer.
   const CAPTIONS = {
-    de: { "live-tv": "Live-TV: Senderkacheln mit laufender Sendung, daneben Vorschau und Programm.", "guide": "TV-Programm: alle Sender im Raster, die rote Linie zeigt die aktuelle Zeit.", "movies": "Filme: Top 10 der Woche, neueste und am besten bewertete Titel.", "movie-details": "Filmdetails: Handlung, Besetzung, Trailer und Weiterschauen.", "series-details": "Serien: Staffeln, Folgen und gesehene Folgen auf einen Blick.", "settings": "Einstellungen: Sprache, Wiedergabe, TV-Programm, Tastenkürzel und mehr." },
-    en: { "live-tv": "Live TV: channel tiles with what is on, preview and programme beside them.", "guide": "TV guide: all channels in a grid, the red line marks the current time.", "movies": "Movies: top 10 of the week, newest and best rated titles.", "movie-details": "Movie details: plot, cast, trailer and resume.", "series-details": "Series: seasons, episodes and watched episodes at a glance.", "settings": "Settings: language, playback, TV guide, shortcuts and more." },
+    de: { "live-tv": "Live-TV: Kategorien, Senderliste, Live-Vorschau und das Tagesprogramm darunter.", "movies": "Filme: Top 10 in deinem Land, neu hinzugefügt und am besten bewertet, dahinter die Filmdetails.", "player": "Player: Wiedergabe mit mpv, Hardware-Decodierung, Ton- und Untertitelspuren.", "tv-guide": "TV-Programm: die Zeitleiste des Tages unter dem laufenden Sender.", "live-sport": "Live-Sport: laufende Spiele mit Spielstand, verknüpft mit deinen Sendern.", "series": "Serien: Top 10, neue Folgen und dein Fortschritt.", "settings": "Einstellungen: Sprache, Wiedergabe, Tastenkürzel, Anbieter und Sicherung." },
+    en: { "live-tv": "Live TV: categories, channel list, live preview and today's programme beneath it.", "movies": "Movies: Top 10 in your country, recently added and best rated, with the details page behind.", "player": "Player: playback with mpv, hardware decoding, audio and subtitle tracks.", "tv-guide": "TV guide: today's timeline under the channel you are watching.", "live-sport": "Live sport: games in progress with live scores, matched to your channels.", "series": "Series: Top 10, new episodes and your progress.", "settings": "Settings: language, playback, shortcuts, providers and backups." },
   };
   let lang = "de";
   let current = "live-tv";
@@ -391,7 +399,7 @@
   const tabs = document.querySelectorAll("[data-shot]");
   const show = (id) => {
     current = id;
-    img.src = "assets/screenshots/" + id + ".webp";
+    img.src = (lang === "de" ? "docs/assets/de/sonora-" : "docs/assets/sonora-") + id + ".webp";
     img.alt = CAPTIONS[lang][id];
     cap.textContent = CAPTIONS[lang][id];
     tabs.forEach((t) => t.setAttribute("aria-selected", String(t.dataset.shot === id)));
