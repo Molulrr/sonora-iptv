@@ -204,7 +204,7 @@ Every shortcut can be changed under **Settings → Keyboard shortcuts**.
 
 This repository holds the releases, the website and the documentation. The application source is not published at this time, but feedback shapes every release.
 
-- **Found a bug?** [Open an issue](https://github.com/Molulrr/sonora-iptv/issues/new) with your Windows version, the Sonora IPTV version (avatar menu → About) and the steps that lead to it.
+- **Found a bug?** [Open an issue](https://github.com/Molulrr/sonora-iptv/issues/new) with your Windows version, the Sonora IPTV version (Settings → About) and the steps that lead to it.
 - **Have an idea?** Open an issue and describe what you would like to do, not only the feature.
 - **Translations:** corrections for any of the six languages are welcome as issues.
 - **Website and docs:** pull requests for `index.html`, this README and `docs/` are welcome.
@@ -215,7 +215,7 @@ Please never post your provider URL, username, password or playlist link in an i
 
 Sonora IPTV is free to download and use. The application is distributed as a binary and its source code is not published. Playback uses [mpv](https://mpv.io), licensed under GPL/LGPL.
 
-Sonora IPTV does not provide channels, streams or subscriptions. Use it only with content you are allowed to watch.
+Sonora IPTV does not provide channels, streams or subscriptions. Use it only with content you are allowed to watch, and only with subscriptions you obtained legally.
 
 <br>
 
