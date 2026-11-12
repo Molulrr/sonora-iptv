@@ -1,10 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-  <rect x="32" y="32" width="960" height="960" rx="232" fill="#16171a"/>
-  <rect x="32.5" y="32.5" width="959" height="959" rx="231.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3"/>
-  <g fill="#3b82f6">
-    <rect x="232" y="212" width="110" height="600" rx="55"/>
-    <rect x="390" y="290" width="110" height="444" rx="55"/>
-    <rect x="548" y="368" width="110" height="288" rx="55"/>
-    <rect x="706" y="446" width="110" height="132" rx="55"/>
+  <defs>
+    <mask id="waves" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+      <rect width="100" height="100" fill="#fff"/>
+      <g fill="none" stroke="#000" stroke-width="7">
+        <circle cx="18" cy="50" r="30"/>
+        <circle cx="18" cy="50" r="52"/>
+      </g>
+    </mask>
+  </defs>
+  <rect x="32" y="32" width="960" height="960" rx="232" fill="#3b82f6"/>
+  <g transform="translate(214 242) scale(5.4)" fill="#fff">
+    <path d="M18 16Q18 6 27 11L88 44Q97 50 88 56L27 89Q18 94 18 84Z" mask="url(#waves)"/>
   </g>
 </svg>
