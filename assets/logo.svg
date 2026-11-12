@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-  <rect x="32" y="32" width="960" height="960" rx="232" fill="#1d1a17"/>
-  <rect x="32.5" y="32.5" width="959" height="959" rx="231.5" fill="none" stroke="#f1ece5" stroke-opacity="0.08" stroke-width="3"/>
-  <g fill="#ff6b57">
+  <rect x="32" y="32" width="960" height="960" rx="232" fill="#16171a"/>
+  <rect x="32.5" y="32.5" width="959" height="959" rx="231.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3"/>
+  <g fill="#3b82f6">
     <rect x="232" y="212" width="110" height="600" rx="55"/>
     <rect x="390" y="290" width="110" height="444" rx="55"/>
     <rect x="548" y="368" width="110" height="288" rx="55"/>

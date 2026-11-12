@@ -19,7 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   /* Shared identity with the README renders: near-black charcoal, off-white
-     type, one dark red used sparingly. Corners 4 / 8 / 12 px like the app. */
+     type, one blue (Sonora's colour) used sparingly. Corners 4 / 8 / 12 px like the app. */
   :root {
     --bg: #0b0b0c;
     --card: #141415;
@@ -28,8 +28,8 @@
     --fg: #ece8e2;
     --dim: #a19c95;
     --mute: #77726c;
-    --accent: #b23a3b;
-    --red: #9e2a2b;
+    --accent: #3b82f6;
+    --red: #3b82f6;
     --on-accent: #fff;
     --r-sm: 4px; --r-md: 8px; --r-lg: 12px;
     --max: 1200px;
@@ -41,7 +41,8 @@
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 88px; }
-  body { margin: 0; overflow-x: hidden; background: var(--bg); color: var(--fg); font: 16px/1.6 var(--ui); -webkit-font-smoothing: antialiased; }
+  /* Soft blue glow at the top, like the app's background without artwork. */
+  body { margin: 0; overflow-x: hidden; background: radial-gradient(60% 50% at 20% -10%, rgba(59, 130, 246, 0.16), transparent 70%), radial-gradient(45% 40% at 85% -5%, rgba(23, 51, 96, 0.35), transparent 70%), var(--bg); background-repeat: no-repeat; color: var(--fg); font: 16px/1.6 var(--ui); -webkit-font-smoothing: antialiased; }
   img { max-width: 100%; display: block; }
   a { color: inherit; }
   :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
