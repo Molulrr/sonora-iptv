@@ -1,11 +1,11 @@
 {
-  "version": "1.1.0+4",
-  "notes": "Tieferes, ruhigeres Blau",
-  "pub_date": "2026-11-14T14:16:31.598Z",
+  "version": "1.1.1",
+  "notes": "Neues Logo: blaues Play-Zeichen auf dunkler Kachel. Schnellerer Start. Sicherheits-Updates für Programmführer und Datenbank. Sport-Karten: Der Spielstand verdeckt die Teamnamen nicht mehr. Ruhigere Bewertungen, einheitlichere Abstände und Filmreihen.",
+  "pub_date": "2026-11-14T19:40:30.551Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbktWdmwvQXFidzMydzlyL2lBK00xaTZhYlpWRlB2bWN3dU56RE9oSGUyZ0o5MkJlTURPdmRmQVREeUFpL0t2VG9waUpmakw3OGJoS0dvdS9XRGI5dE85aWQ3Qllra1FFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NjY1NzkxCWZpbGU6U29ub3JhIElQVFZfMS4xLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjEuMS4wKzQKWDdxbjd2WTVCekQrVEVZTnBNOUVkWjZqVFdlK2FJTnBBUlg5RnU2OWRVSGdPMjl6V0pZZmhWQkZQNWFFdjUrZ05DVXQ1U1MxOUpDdnN3RHVLVXRJQXc9PQo=",
-      "url": "https://github.com/Molulrr/sonora-iptv/releases/download/v1.1.0/Sonora.IPTV_1.1.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbktWdmwvQXFid3lZUUZyTEdRWnJPaDk4dXVWY2llS3FZYVlhZ2R3WktLZ2NBWjIrTDdyeUl4TUJpTExwUUc0M3RQUzN1M3l4Rk45Y2VJQmlvUmNqRUVWR1ZCdjlKekFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0Njg1MjMwCWZpbGU6U29ub3JhIElQVFZfMS4xLjFfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjEuMS4xCjJaMmtLMFp3QlRzQVV1ZDVwdEp1YUJYRFpRSXVpb1hhQzRYOGRxblNvWUJTQi9EYVdQNVBlSzFxa3hYN0s5R2N6a1hpWVFvVVhCZGpDbVVEbWQzSUR3PT0K",
+      "url": "https://github.com/Molulrr/sonora-iptv/releases/download/v1.1.1/Sonora.IPTV_1.1.1_x64-setup.exe"
     }
   }
 }
