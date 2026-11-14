@@ -1,10 +1,10 @@
 {
-  "version": "1.1.0+2",
-  "notes": "Neues Logo und cleanere Icons",
-  "pub_date": "2026-11-14T12:09:36.526Z",
+  "version": "1.1.0+3",
+  "notes": "Sanfterer Farbverlauf und etwas dunkleres Blau",
+  "pub_date": "2026-11-14T14:11:23.138Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbktWdmwvQXFidzhpSzg5bFkwMkl3L3E3VkVyOERmR2NJdVEvY3NaRUIxYVpNbkhlcXFwWTRXZkNYOEVQdUF1K1dmMUwwL2hnTXU0MFI0bndlaldoWEVBNHFqcVIzTWdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NjU4MTc2CWZpbGU6U29ub3JhIElQVFZfMS4xLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjEuMS4wKzIKSmNnYUF0NldxZTNIdXJFTXRTbUFqbEc5dWpGckI0eVgzTkRCTWo2N1ZrRHNUbTdWTW1mOVNUajNwZ21WN3NMWU5EZWx4SUkyTXpwYk5ERGl3bHZaQUE9PQo=",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbktWdmwvQXFidzRyditoY1Fkak8xZjlXbGpORnRna0dMQ1NXd2wwVTUvNlk1cWJpU1JXa1pybFdGVDdFK0dLeDlXaXlZSk0zNHFZTUdkdXNERVM4S0g0MmZzT3MvZlFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NjY1NDgzCWZpbGU6U29ub3JhIElQVFZfMS4xLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjEuMS4wKzMKcnJBdUxMSlFoMDNSSnlyMUFwYWFHQ2RIUTlMS0VqNXRMNWtFV2tOT250M3pOV0pGc1ZZc3BhNVQvWGJsNmQxM0o2VU9KTG05VmFDbFRlTGtRZnF3Qmc9PQo=",
       "url": "https://github.com/Molulrr/sonora-iptv/releases/download/v1.1.0/Sonora.IPTV_1.1.0_x64-setup.exe"
     }
   }
