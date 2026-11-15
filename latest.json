@@ -1,11 +1,11 @@
 {
-  "version": "1.1.1",
-  "notes": "Neues Logo: blaues Play-Zeichen auf dunkler Kachel. Schnellerer Start. Sicherheits-Updates für Programmführer und Datenbank. Sport-Karten: Der Spielstand verdeckt die Teamnamen nicht mehr. Ruhigere Bewertungen, einheitlichere Abstände und Filmreihen.",
-  "pub_date": "2026-11-14T19:40:30.551Z",
+  "version": "1.2.0",
+  "notes": "Neu in 1.2.0: Studios (Netflix, Disney+, Prime Video, Apple TV+, HBO Max, Paramount+, Hulu, Peacock, Crunchyroll, Starz, AMC+) mit eigener Seite, Filme/Serien und Genres. Filme und Serien erscheinen nur noch einmal statt einmal pro Sprache, die Sprache wählst du auf der Info-Seite. Aufgeräumte Weiterschauen-Karten, ruhigere Animationen, Lautstärke im kleinen Live-TV-Bild, Bedienung ohne Maus (Bewertungen, Knöpfe immer sichtbar). Schlanker und schneller: weniger Arbeitsspeicher im Leerlauf, kein doppelter Bilder-Cache, Startseite und Live-TV laden deutlich schneller.",
+  "pub_date": "2026-11-15T01:28:18.590Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbktWdmwvQXFid3lZUUZyTEdRWnJPaDk4dXVWY2llS3FZYVlhZ2R3WktLZ2NBWjIrTDdyeUl4TUJpTExwUUc0M3RQUzN1M3l4Rk45Y2VJQmlvUmNqRUVWR1ZCdjlKekFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0Njg1MjMwCWZpbGU6U29ub3JhIElQVFZfMS4xLjFfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjEuMS4xCjJaMmtLMFp3QlRzQVV1ZDVwdEp1YUJYRFpRSXVpb1hhQzRYOGRxblNvWUJTQi9EYVdQNVBlSzFxa3hYN0s5R2N6a1hpWVFvVVhCZGpDbVVEbWQzSUR3PT0K",
-      "url": "https://github.com/Molulrr/sonora-iptv/releases/download/v1.1.1/Sonora.IPTV_1.1.1_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSbktWdmwvQXFid3hhc2xhcy95Q3Q4UUZzamE2Q1haVXVxb3YzVjUrc2FOZi9qWEZ1dkVmb3pSWldYdFlidCtCK2Y2NE1TdXVQS1NhUlZyWXlaUDYyQy9oV3drTWtSVlFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0NzA2MDk4CWZpbGU6U29ub3JhIElQVFZfMS4yLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjEuMi4wCndLNVB3SCtoYkNvQVYwQ3dVb0diaFArNm1OdDZiNEFWazRja0N1OUxBeVdsUEsyOGNycTZKd01VYjBZTkN6RWhXbHlMTDNqbDFYak83L3lHbzVGc0F3PT0K",
+      "url": "https://github.com/Molulrr/sonora-iptv/releases/download/v1.2.0/Sonora.IPTV_1.2.0_x64-setup.exe"
     }
   }
 }
