@@ -39,7 +39,7 @@ Sonora IPTV is a player only. It does not include any channels, streams, playlis
 ## Features
 
 - **Live TV** — categories, channel list, live preview and today's programme as a timeline
-- **Movies and series** — posters, details, seasons, episodes and your progress
+- **Movies and series** — posters, details, seasons, episodes and your progress; one card per title across languages, studio pages (Netflix, Disney+, Prime Video …)
 - **Live sport** — current scores, matched to the channels in your own subscription
 - **Continue watching** — resume where you stopped; the next episode starts by itself
 - **Playback with mpv** — hardware decoding, audio and subtitle tracks, automatic reconnect
